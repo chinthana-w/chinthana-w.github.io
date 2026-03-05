@@ -20,8 +20,8 @@ export default function About() {
               infrastructure to writing bare-metal firmware and FPGA logic.
             </p>
             <p>
-              I’ve found that the best software comes from 
-              fast-moving teams that aren't afraid of hard problems. 
+              I&apos;ve found that the best software comes from 
+              fast-moving teams that aren&apos;t afraid of hard problems.
               My background is in end-to-end ownership, handling things from 
               design decisons to testing and deployment. I value clean code, 
               automated testing, and a deployment process that just works, 
