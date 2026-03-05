@@ -1,6 +1,6 @@
-# jester-2-6.github.io
+# chinthana-w.github.io
 
-Personal portfolio and resume supplement website for Jester, built with **Next.js**, **TypeScript**, and **Tailwind CSS**. Hosted at [jester-2-6.github.io](https://jester-2-6.github.io).
+Personal portfolio and resume supplement website for Chinthana, built with **Next.js**, **TypeScript**, and **Tailwind CSS**. Hosted at [chinthana-w.github.io](https://chinthana-w.github.io).
 
 ## Features
 

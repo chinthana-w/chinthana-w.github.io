@@ -20,17 +20,19 @@ export default function About() {
               infrastructure to writing bare-metal firmware and FPGA logic.
             </p>
             <p>
-              I thrive in agile, cross-functional teams and love taking
-              ownership of hard problems end-to-end &mdash; from architecting
-              scalable AWS backends to leading engineering teams at an early-stage
-              startup. I believe in clean, self-documenting code backed by solid
-              testing and CI/CD practices.
+              I’ve found that the best software comes from 
+              fast-moving teams that aren't afraid of hard problems. 
+              My background is in end-to-end ownership, handling things from 
+              design decisons to testing and deployment. I value clean code, 
+              automated testing, and a deployment process that just works, 
+              so we can focus on building what matters.
             </p>
             <p>
               Currently pursuing a Master&apos;s in Electrical &amp; Computer
               Engineering at Southern Illinois University Carbondale (GPA 4.0),
-              where I research physics-informed neural networks for automated
-              circuit testing and build custom C++/CUDA tooling.
+              where I research methods to accelerate circuit testing with deep learning.
+              I also handle the management of the department UNIX system Lab 
+              and the EDA research cluster.
             </p>
             <p>Here are a few technologies I&apos;ve been working with recently:</p>
             <ul className="grid grid-cols-2 gap-2 mt-4">

@@ -26,7 +26,7 @@ export default function Navbar() {
           href="#hero"
           className="text-xl font-bold text-[#38bdf8] font-mono tracking-tight hover:opacity-80 transition-opacity"
         >
-          jester-2-6
+          github.com/chinthana-w
         </a>
 
         {/* Desktop Navigation */}
@@ -43,7 +43,7 @@ export default function Navbar() {
           ))}
           <li>
             <a
-              href="https://github.com/Jester-2-6"
+              href="https://github.com/chinthana-w"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm px-4 py-2 rounded-lg border border-[#38bdf8] text-[#38bdf8] hover:bg-[#38bdf8]/10 transition-colors duration-200"

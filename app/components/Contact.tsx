@@ -44,7 +44,7 @@ export default function Contact() {
     <section id="contact" className="py-24 px-6 bg-[#1e293b]/50">
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="text-3xl font-bold text-[#e2e8f0] mb-2">
-          <span className="text-[#38bdf8] font-mono text-xl mr-3">04.</span>
+          <span className="text-[#38bdf8] font-mono text-xl mr-3">07.</span>
           Get In Touch
         </h2>
         <div className="w-36 h-0.5 bg-[#334155] mx-auto mb-8" />
