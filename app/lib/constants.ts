@@ -3,8 +3,74 @@ export const GITHUB_USERNAME = "chinthana-w";
 export const NAV_LINKS = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
+];
+
+export type TimelineItemType = "work" | "education";
+
+export interface TimelineItem {
+  type: TimelineItemType;
+  period: string;
+  title: string;
+  organization: string;
+  location: string;
+  highlights: string[];
+}
+
+export const TIMELINE_ITEMS: TimelineItem[] = [
+  {
+    type: "education",
+    period: "2022 – Exp. Aug 2026",
+    title: "Masters in Electrical & Computer Engineering",
+    organization: "Southern Illinois University Carbondale",
+    location: "Carbondale, IL",
+    highlights: [
+      "GPA: 4.0/4.0",
+      "Researching Physics-Informed AI for circuit testing using multi-path transformers and 3-valued logic integrated into a classical ATPG backtrace loop.",
+      "Engineered LUTorch — a PyTorch C++/CUDA extension that simulates memristor crossbar arrays, achieving ~95% of SPICE accuracy at orders-of-magnitude faster speed.",
+      "Manages the department UNIX system lab, provisioning Synopsys/Cadence EDA tools and supporting research users.",
+      "Set up and manages a containerized mini cluster using Docker, k3s, and TrueNAS for automated provisioning and redundancy.",
+    ],
+  },
+  {
+    type: "work",
+    period: "Mar 2020 – May 2023",
+    title: "Logistics Engineering Team Lead & Senior Software Engineer",
+    organization: "Cut+Dry",
+    location: "San Jose, CA (Remote)",
+    highlights: [
+      "Led the logistics engineering team, taking full ownership of the \"Track+\" enterprise platform's development lifecycle within an Agile environment.",
+      "Architected highly responsive SPAs and cross-platform mobile apps using React, TypeScript, and GraphQL, and worked with their custom graph database system.",
+      "Scaled AWS cloud infrastructure to process high-volume, real-time logistics data streams with near-zero downtime.",
+      "Drove a culture of quality through strict peer code reviews (git), CI/CD pipelines, and comprehensive end-to-end and unit testing (PHPUnit/PyTest).",
+    ],
+  },
+  {
+    type: "education",
+    period: "2015 – Feb 2020",
+    title: "B.Sc. (Hons) in Electronic & Telecommunication Engineering",
+    organization: "University of Moratuwa",
+    location: "Katubedda, Sri Lanka",
+    highlights: [
+      "GPA: 3.42/4.2",
+      "Gained strong foundations in electrical power systems, signals, and communications.",
+      "Worked extensively with advanced hardware design and low-level software, including bare-metal C and custom assembly on FPGA platforms.",
+    ],
+  },
+  {
+    type: "work",
+    period: "Jul 2017 – Apr 2018",
+    title: "Software Engineering Intern — ML Systems",
+    organization: "Wave Computing",
+    location: "Santa Clara, CA (Remote)",
+    highlights: [
+      "Wrote highly optimized, object-oriented C/C++ and Python to build \"WavePy,\" a custom compiler and simulator for a novel multi-core architecture.",
+      "Engineered a hardware abstraction layer allowing standard Python to automatically compile down to the chip's custom C-based interface.",
+      "Collaborated tightly with hardware teams in a multi-OS/Linux environment to validate software algorithms and data flows before physical silicon was available.",
+    ],
+  },
 ];
 
 export const SKILLS = [

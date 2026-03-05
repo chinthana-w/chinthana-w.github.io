@@ -28,7 +28,7 @@ export default function NotableProjects() {
     <section id="notable-projects" className="py-24 px-6 bg-[#1e293b]/30">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-[#e2e8f0] mb-2">
-          <span className="text-[#38bdf8] font-mono text-xl mr-3">03.</span>
+          <span className="text-[#38bdf8] font-mono text-xl mr-3">04.</span>
           Notable Projects
         </h2>
         <div className="w-56 h-0.5 bg-[#334155] mb-12" />
