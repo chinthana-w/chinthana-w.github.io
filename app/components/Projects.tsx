@@ -99,7 +99,7 @@ export default function Projects() {
         </h2>
         <div className="w-48 h-0.5 bg-[#334155] mb-4" />
         <p className="text-[#94a3b8] mb-12">
-          What I'm working on these days. Check out{" "}
+          What I&apos;m working on these days. Check out{" "}
           <a
             href={`https://github.com/${GITHUB_USERNAME}`}
             target="_blank"
