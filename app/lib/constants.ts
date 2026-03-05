@@ -34,18 +34,18 @@ export const NOTABLE_PROJECTS = [
   {
     title: "Physics-Informed AI for Circuit Testing",
     description:
-      "Custom AI solver utilizing physics-informed neural networks to drastically accelerate automated circuit testing. Developed as part of M.S. research at SIUC.",
-    tags: ["Python", "PyTorch", "Neural Networks", "Research"],
+      "Topology-Aware Justification Oracle for digital circuits using Multi-Path Transformers and 3-Valued Logic (0, 1, X). Topology-aware embeddings maintain global consistency across reconvergent paths, while a differentiable logic consistency loss enforces Boolean truth tables during training. The AI model is integrated directly into a classical PODEM ATPG backtrace loop, reducing test-generation backtrack counts and accelerating fault coverage. Developed as M.S. research at SIUC with RL fine-tuning support for continuous self-improvement.",
+    tags: ["Python", "PyTorch", "Transformers", "ATPG", "RL", "Research"],
     href: "https://github.com/chinthana-w/s-imply",
     featured: true,
     // image: "/projects/s-imply.png",
     image: "",
   },
   {
-    title: "LUTorch Library",
+    title: "LUTorch — Memristor Crossbar Simulator",
     description:
-      "Custom PyTorch extension in C++ and CUDA that bypasses SPICE simulations entirely, achieving 95% of SPICE accuracy while running at native PyTorch speeds.",
-    tags: ["C++", "CUDA", "PyTorch", "Research"],
+      "PyTorch library that simulates memristor crossbar array networks using precomputed conductance/voltage lookup tables (LUTs), eliminating the need for expensive SPICE simulations. Provides drop-in MemConv2d and MemLinear replacements compatible with any standard PyTorch training loop. Achieves ~95% of SPICE simulation accuracy at orders-of-magnitude faster speed, enabling rapid design-space exploration of analog neuromorphic hardware in software.",
+    tags: ["C++", "CUDA", "PyTorch", "Memristors", "Analog AI", "Research"],
     href: "https://github.com/chinthana-w/LUTorch",
     featured: true,
     // image: "/projects/lutorch.png",
@@ -54,7 +54,7 @@ export const NOTABLE_PROJECTS = [
   {
     title: "Full-Stack Traffic Analysis Platform",
     description:
-      "Cloud-native web application using React and Python to process real-time video streams, deployed on AWS with full CI/CD pipeline automation.",
+      "Cloud-native web application that ingests live video streams, runs computer-vision traffic analytics in Python, and surfaces results through a React SPA. Deployed on AWS with a fully automated CI/CD pipeline handling build, test, and zero-downtime release across cloud infrastructure.",
     tags: ["React", "Python", "AWS", "CI/CD"],
     href: "https://github.com/abrutech/vision-traffic",
     featured: false,
@@ -64,8 +64,8 @@ export const NOTABLE_PROJECTS = [
   {
     title: "Edge-Vision Traffic Sensing System",
     description:
-      "Bridged hardware and software with highly optimized Baremetal C code handling RTL processing logic and timing algorithms on a Zynq 7 FPGA.",
-    tags: ["Baremetal C", "Python", "FPGA", "Zynq 7"],
+      "SoC implementation of a real-time traffic-sensing pipeline on a Xilinx Zynq-7 FPGA. Baremetal C code manages RTL processing logic and strict hardware timing constraints, while a Python layer handles higher-level coordination—bridging hardware and software at the edge with no OS overhead.",
+    tags: ["Baremetal C", "Python", "FPGA", "Zynq 7", "SoC"],
     href: "https://github.com/abrutech/vision-traffic-soc",
     featured: false,
     // image: "/projects/vision-traffic-soc.png",
@@ -74,8 +74,8 @@ export const NOTABLE_PROJECTS = [
   {
     title: "Custom Serial Communication Bus",
     description:
-      "Robust device-to-device protocol with automatic baud rate detection, split transactions, and priority arbitration. Validated across multiple physical FPGA boards.",
-    tags: ["Verilog", "FPGA", "Protocol Design"],
+      "Verilog HDL serial bus supporting up to 12 masters across 3 priority levels and 8 slaves. Features automatic baud-rate detection via a custom handshake protocol, split transactions, and priority arbitration—demonstrating the core principles behind SPI/I2C. Synthesized and validated across multiple interconnected physical FPGA boards.",
+    tags: ["Verilog", "FPGA", "Protocol Design", "HDL"],
     href: "https://github.com/abrutech/system-bus",
     featured: false,
     // image: "/projects/system-bus.png",
@@ -84,8 +84,8 @@ export const NOTABLE_PROJECTS = [
   {
     title: "ABRUTECH Custom Processor & Compiler",
     description:
-      "Custom processor architecture with a companion Assembly compiler capable of executing image processing algorithms and general-purpose computational tasks.",
-    tags: ["Assembly", "Verilog", "Computer Architecture"],
+      "Full processor architecture built from scratch in Verilog and implemented on an Altera DE2-115 FPGA using only ~1,000 logic elements. The 16-instruction ISA executes in 2.2 clock cycles on average and includes a special Address Maker for zero-overhead 2D matrix traversal and a shift-register bank for fast linear convolution—enabling programs as short as 30–40 bytes to downsample, upsample, and edge-detect 512×512 images. A companion Python compiler translates the human-readable ISA to machine code and catches syntax errors, while a simulator lets developers debug algorithms remotely before flashing the FPGA.",
+    tags: ["Assembly", "Verilog", "FPGA", "Computer Architecture", "Python"],
     href: "https://github.com/BlazeCode2/ABRUTECH_processor_automatic",
     featured: false,
     // image: "/projects/abrutech.png",
