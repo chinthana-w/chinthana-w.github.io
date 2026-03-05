@@ -55,7 +55,7 @@ export default function Contact() {
         </p>
 
         <a
-          href={`mailto:jester@example.com`}
+          href={`mailto:chinthana.w@siu.edu`}
           className="inline-block px-10 py-4 border-2 border-[#38bdf8] text-[#38bdf8] font-semibold rounded-lg hover:bg-[#38bdf8]/10 transition-colors duration-200 text-lg mb-12"
         >
           Say Hello

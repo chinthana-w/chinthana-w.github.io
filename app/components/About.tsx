@@ -1,3 +1,4 @@
+import React from "react";
 import { GITHUB_USERNAME } from "@/app/lib/constants";
 
 export default function About() {
@@ -13,33 +14,33 @@ export default function About() {
         <div className="grid md:grid-cols-3 gap-12 items-start">
           <div className="md:col-span-2 space-y-4 text-[#94a3b8] leading-relaxed">
             <p>
-              Hello! I&apos;m Jester, a software developer with a passion for
-              building elegant solutions to complex problems. My journey into
-              programming started with a curiosity about how things work, and
-              it has grown into a deep love for crafting software that makes a
-              difference.
+              Hello! I&apos;m Chinthana, a software engineer with 4+ years of
+              professional full-stack web development and systems-level design
+              experience. My journey spans from crafting modern SPAs and cloud
+              infrastructure to writing bare-metal firmware and FPGA logic.
             </p>
             <p>
-              I enjoy working across the full stack — from designing intuitive
-              user interfaces to architecting scalable backend systems. I
-              believe in writing clean, maintainable code that others can
-              understand and build upon.
+              I thrive in agile, cross-functional teams and love taking
+              ownership of hard problems end-to-end &mdash; from architecting
+              scalable AWS backends to leading engineering teams at an early-stage
+              startup. I believe in clean, self-documenting code backed by solid
+              testing and CI/CD practices.
             </p>
             <p>
-              When I&apos;m not coding, you&apos;ll find me exploring new
-              technologies, contributing to open-source projects, or learning
-              something new. I&apos;m always looking for interesting problems
-              to solve.
+              Currently pursuing a Master&apos;s in Electrical &amp; Computer
+              Engineering at Southern Illinois University Carbondale (GPA 4.0),
+              where I research physics-informed neural networks for automated
+              circuit testing and build custom C++/CUDA tooling.
             </p>
             <p>Here are a few technologies I&apos;ve been working with recently:</p>
             <ul className="grid grid-cols-2 gap-2 mt-4">
               {[
-                "TypeScript",
-                "React / Next.js",
+                "C/C++ / CUDA",
+                "TypeScript / React",
                 "Python",
-                "Node.js",
-                "Docker",
-                "GitHub Actions",
+                "Node.js / GraphQL",
+                "Docker / k3s",
+                "FPGA / Baremetal C",
               ].map((tech) => (
                 <li key={tech} className="flex items-center gap-2 text-sm">
                   <span className="text-[#38bdf8]">▹</span>

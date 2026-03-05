@@ -1,0 +1,129 @@
+\documentclass[letterpaper,10pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND THEMES
+%----------------------------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.7in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontspec}
+
+% Define colors for headers
+\definecolor{darkblue}{rgb}{0.0, 0.0, 0.45}
+
+% Formatting for Sections (Tighter spacing to fit 2 pages)
+\titleformat{\section}{\Large\bfseries\color{darkblue}\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+% Formatting for Items (Reduced separation)
+\setlist[itemize]{leftmargin=1.5em, labelsep=0.5em, itemsep=1pt}
+
+% Custom commands for header
+\newcommand{\name}[1]{\centerline{\Huge\bfseries #1}}
+\newcommand{\contact}[1]{\centerline{\small #1}}
+
+\begin{document}
+
+\name{Chinthana Wimalasuriya}
+\vspace{4pt}
+\contact{Carbondale, IL $|$ +1 618 203 4693 $|$ chinthana.w@siu.edu}
+\contact{\href{https://www.linkedin.com/in/chinthanaw}{linkedin.com/in/chinthanaw}}
+
+\vspace{8pt}
+\noindent
+Software Engineer with 4+ years of professional full-stack web development and systems-level design experience. Proven track record of shipping scalable, robust applications, from developing modern full-stack applications to working with bare-metal firmware. Thriving in agile, cross-functional teams and ready to take initiative. Proficient in modern languages, tools, and concepts, such as C/C++, Python, object-oriented programming, agile development, containerized deployment, and automated testing. Currently pursuing an entry or mid-level engineering position in an environment that values delivering robust solutions that aim to resolve real-world problems.
+
+\section{Professional Experience}
+
+\noindent \textbf{Cut+Dry} \hfill San Jose, CA (Remote) \\
+\textit{Logistics Engineering Team Lead \& Senior Software Engineer} \hfill Mar 2020 -- May 2023
+\begin{itemize}
+    \item Led the logistics engineering team, taking full ownership of the ``Track+'' enterprise platform's development lifecycle within an Agile environment. Owned multiple responsibilities in a resource-constrained startup environment.
+    \item Architected and shipped highly responsive single-page applications (SPAs) and cross-platform mobile apps utilizing React, modern JavaScript/TypeScript tooling, and GraphQL. Worked with and made improvements to their custom graph database system.
+    \item Worked with scalable AWS cloud infrastructure to process high-volume, real-time logistics data streams with near-zero downtime. Worked with end users to ensure product satisfaction.
+    \item Drove a relentless culture of software quality by enforcing strict peer code reviews with version control (git), CI/CD pipelines, and comprehensive end-to-end/unit testing protocols (PHPUnit/PyTest) to verify deployments.
+    \item Wrote maintainable code with self-documenting code and extensive documentation.
+\end{itemize}
+
+\vspace{10pt}
+
+\noindent \textbf{Wave Computing} \hfill Santa Clara, CA (Remote) \\
+\textit{Software Engineering Intern (ML Systems)} \hfill Jul 2017 -- Apr 2018
+\begin{itemize}
+    \item Wrote highly optimized, object-oriented C/C++ and Python to build out ``WavePy,'' a custom compiler and simulator for a novel multi-core architecture.
+    \item Engineered a crucial hardware abstraction layer, allowing software teams to write standard Python that automatically compiled down to the chip's custom C-based interface.
+    \item Collaborated tightly with hardware teams in a multi-OS/Linux environment to validate complex software algorithms, and data flows long before physical silicon was available, hunting down anomalies and root causes.
+\end{itemize}
+
+\section{Technical Skills}
+\begin{itemize}
+    \item \textbf{Languages:} C/C++, TypeScript, JavaScript, Python, Assembly, PHP, SQL, Verilog, Java, Rust, TCL.
+    \item \textbf{Frontend \& Web:} React, React-Native, Node.js, Single Page Applications (SPAs), RESTful APIs, HTML/CSS.
+    \item \textbf{Embedded \& Systems:} Baremetal C, Linux Systems, Firmware concepts, Protocol Design (I2C/SPI), FPGA.
+    \item \textbf{Tools \& Domain:} Git, Docker, CI/CD, CMake, PHPUnit, PyTest, Agile Development, Object-Oriented Design (OOD), Docker, k3s, Cursor, LLM-assisted coding, Claude Code, Gemini CLI, OpenClaw.
+\end{itemize}
+
+\section{Education}
+
+\noindent \textbf{Southern Illinois University Carbondale} \hfill Carbondale, IL \\
+\textit{Masters in Electrical \& Computer Engineering} \hfill Exp. August 2026
+\begin{itemize}
+    \item \textbf{GPA: 4.0/4.0}
+    \item \textbf{Physics-Informed AI for Circuit Testing:} Developing a custom AI solver utilizing physics-informed neural networks to accelerate automated circuit testing drastically. \href{https://github.com/Jester-2-6/s-imply}{(see on Github)}
+    \item \textbf{LUTorch Library (C++/CUDA):} Engineered a custom PyTorch extension using C++ and CUDA to bypass SPICE simulations, achieving 95\% accuracy of SPICE while running at speeds similar to PyTorch. \href{https://github.com/Jester-2-6/LUTorch}{(see on Github)}
+    \item Managed the UNIX system laboratory, provisioned Synopsys/Cadence tools, and worked with users to ensure smooth operation.
+    \item Set up and managed a mini cluster using containerization, automated provisioning, and redundancy using Docker, k3s, and TrueNAS.
+\end{itemize}
+
+\noindent \textbf{University of Moratuwa} \hfill Katubedda, Sri Lanka \\
+\textit{B.Sc. (Hons) in Electronic \& Telecommunication Engineering} \hfill Feb 2020
+\begin{itemize}
+    \item \textbf{GPA: 3.42/4.2}
+    \item Gained experience in the basics of electrical power systems.
+    \item Worked with advanced hardware design, low-level software, including bare-metal C and custom assembly.
+\end{itemize}
+
+\section{Selected Projects}
+
+\noindent \textbf{Full-Stack Traffic Analysis Platform} \href{https://github.com/abrutech/vision-traffic}{(see on Github)} \hfill React, AWS, Python \\
+\textit{Independent Project} \hfill 2021
+\begin{itemize}
+    \item Developed a cloud-native web application utilizing React and Python to process video streams. Managed seamless deployment onto AWS using CI/CD pipelines.
+\end{itemize}
+
+\vspace{6pt}
+\noindent \textbf{Edge-Vision Traffic Sensing System} \href{https://github.com/abrutech/vision-traffic-soc}{(see on Github)} \hfill Baremetal C, Python, FPGA \\
+\textit{University Research} \hfill 2019
+\begin{itemize}
+    \item Bridged hardware and software by writing optimized Baremetal C code to handle RTL processing logic and timing algorithms, operating under strict hardware constraints (Running on Zynq 7).
+\end{itemize}
+
+\vspace{6pt}
+\noindent \textbf{Custom Serial Communication Bus}\href{https://github.com/abrutech/system-bus}{(see on Github)} \hfill Verilog, FPGA \\
+\textit{University Project} \hfill 2019
+\begin{itemize}
+    \item Designed a robust device-to-device communication protocol featuring automatic baud rate detection via a custom handshake protocol, with advanced features like split transactions and priority arbitration, demonstrating core principles used in embedded networking (SPI, I2C).
+    \item Proved real-world fault tolerance by deploying the synthesized bitstream across multiple physical FPGA boards interconnected on a shared hardware bus.
+\end{itemize}
+
+\vspace{6pt}
+\noindent \textbf{ABRUTECH Custom Processor \& Compiler} \href{https://github.com/BlazeCode2/ABRUTECH_processor_automatic}{(see on Github)} \hfill Assembly, Verilog \\
+\textit{University Project} \hfill 2018
+\begin{itemize}
+    \item Built a customized processor architecture from scratch, capable of executing complex image processing algorithms alongside general-purpose computational tasks.
+    \item Engineered a custom Assembly compiler to translate high-level algorithmic instructions into executable machine code, and tested the stack by writing algorithms such as image downsampling, color filtering, and Eratosthenes sieve. 
+\end{itemize}
+
+\section{Leadership, Service \& Awards}
+
+\begin{itemize}
+    \item \textbf{National Best Quality Software Awards (NBQSA):} Won Gold (British Computer Society).
+    \item \textbf{Tech Conference Speaker (MERCON '22):} Delivered an invited talk on engineering research methodologies and practical applications.
+    \item \textbf{Robotics Mentor \& Educator:} Spearheaded hands-on robotics workshops for underprivileged students across Sri Lanka, guiding teams to compete in national-level tournaments.
+    \item \textbf{Community Project Director (Leo Club):} Managed the Environment and Sustainability sector, coordinating large-scale service projects and leading volunteer teams.
+\end{itemize}
+
+\end{document}

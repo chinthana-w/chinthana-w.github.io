@@ -23,17 +23,18 @@ export default function Hero() {
         </p>
 
         <h1 className="text-5xl md:text-7xl font-bold text-[#e2e8f0] mb-4 tracking-tight">
-          Jester
+          Chinthana.
         </h1>
 
         <h2 className="text-3xl md:text-5xl font-bold text-[#94a3b8] mb-6">
-          I build things for the web.
+          I build things for the web and beyond.
         </h2>
 
         <p className="max-w-2xl mx-auto text-lg text-[#94a3b8] leading-relaxed mb-10">
-          I&apos;m a passionate full-stack developer who loves crafting clean,
-          efficient, and scalable software solutions. Explore my projects and
-          see what I&apos;ve been building.
+          Software engineer with 4+ years across full-stack web development and
+          systems-level design &mdash; from scalable cloud applications to bare-metal
+          firmware. Currently pursuing a Master&apos;s in ECE at Southern Illinois
+          University Carbondale.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

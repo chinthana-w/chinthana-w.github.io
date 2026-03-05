@@ -1,4 +1,4 @@
-export const GITHUB_USERNAME = "Jester-2-6";
+export const GITHUB_USERNAME = "chinthana-w";
 
 export const NAV_LINKS = [
   { href: "#about", label: "About" },
@@ -10,19 +10,19 @@ export const NAV_LINKS = [
 export const SKILLS = [
   {
     category: "Languages",
-    items: ["Python", "TypeScript", "JavaScript", "Java", "C++", "SQL"],
+    items: ["C/C++", "TypeScript", "JavaScript", "Python", "Assembly", "PHP", "SQL", "Verilog", "Rust", "Java"],
   },
   {
-    category: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "HTML5", "CSS3"],
+    category: "Frontend & Web",
+    items: ["React", "React Native", "Next.js", "Node.js", "RESTful APIs", "GraphQL", "HTML/CSS"],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express", "REST APIs", "GraphQL"],
+    category: "Embedded & Systems",
+    items: ["Baremetal C", "Linux Systems", "Firmware", "FPGA", "I2C/SPI", "CUDA"],
   },
   {
-    category: "Tools & Platforms",
-    items: ["Git", "GitHub Actions", "Docker", "Linux", "VS Code"],
+    category: "Tools & Domain",
+    items: ["Git", "Docker", "CI/CD", "CMake", "PyTest", "PHPUnit", "Agile", "k3s", "AWS"],
   },
 ];
 
@@ -34,12 +34,12 @@ export const SOCIAL_LINKS = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/jester-2-6",
+    href: "https://www.linkedin.com/in/chinthanaw",
     icon: "linkedin",
   },
   {
     label: "Email",
-    href: "mailto:jester@example.com",
+    href: "mailto:chinthana.w@siu.edu",
     icon: "email",
   },
 ];
