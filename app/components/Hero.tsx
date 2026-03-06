@@ -32,11 +32,11 @@ export default function Hero() {
         </h1>
 
         <h2 className="text-3xl md:text-5xl font-bold text-[#94a3b8] mb-6">
-          I build things for the web and beyond.
+          I build things for a smarter world.
         </h2>
 
         <p className="max-w-2xl mx-auto text-lg text-[#94a3b8] leading-relaxed mb-3">
-          Software engineer with 4+ years across full-stack web development and
+          System engineer with 4+ years across full-stack web development and
           systems-level design from scalable cloud applications to bare-metal
           firmware. Currently pursuing a Master&apos;s in ECE at Southern Illinois
           University Carbondale.
@@ -48,42 +48,44 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#projects"
-            className="px-8 py-3 bg-[#38bdf8] text-[#0f172a] font-semibold rounded-lg hover:bg-[#7dd3fc] transition-colors duration-200"
+            className="relative overflow-hidden inline-flex items-center justify-center px-8 py-3 rounded-full bg-[#38bdf8]/20 backdrop-blur-xl border border-[#38bdf8]/40 shadow-[inset_0_1px_0_rgba(56,189,248,0.25),0_4px_20px_rgba(56,189,248,0.15)] text-[#e2e8f0] font-semibold hover:bg-[#38bdf8]/30 transition-all duration-200"
           >
-            View My Work
+            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none" aria-hidden="true" />
+            <span className="relative">View My Work</span>
           </a>
           <a
             href="/resume.pdf"
             download="Chinthana_Wimalasuriya_Resume.pdf"
-            className="px-8 py-3 border border-[#38bdf8] text-[#38bdf8] font-semibold rounded-lg hover:bg-[#38bdf8]/10 transition-colors duration-200 inline-flex items-center gap-2"
+            className="relative overflow-hidden inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full bg-white/[0.07] backdrop-blur-xl border border-[#38bdf8]/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_2px_12px_rgba(0,0,0,0.3)] text-[#38bdf8] font-semibold hover:bg-white/[0.12] transition-all duration-200"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.07] to-transparent pointer-events-none" aria-hidden="true" />
+            <svg className="relative w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
-            Get My Resume
+            <span className="relative">Get My Resume</span>
           </a>
           <a
             href="#contact"
-            className="px-8 py-3 border border-[#475569] text-[#94a3b8] font-semibold rounded-lg hover:bg-[#1e293b] transition-colors duration-200"
+            className="relative overflow-hidden inline-flex items-center justify-center px-8 py-3 rounded-full bg-white/[0.05] backdrop-blur-xl border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_2px_8px_rgba(0,0,0,0.25)] text-[#94a3b8] font-semibold hover:bg-white/[0.10] transition-all duration-200"
           >
-            Get In Touch
+            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.06] to-transparent pointer-events-none" aria-hidden="true" />
+            <span className="relative">Get In Touch</span>
           </a>
         </div>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
+        <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2">
           {[
-            { label: "4+ yrs experience" },
-            { label: "Full-Stack" },
-            { label: "Systems & Embedded" },
-            { label: "M.S. ECE @ SIUC" },
-          ].map(({ label }) => (
+            "4+ yrs experience",
+            "Full-Stack",
+            "Systems & Embedded",
+            "M.S. ECE @ SIUC",
+          ].map((label) => (
             <span
               key={label}
-              className="relative px-4 py-1.5 rounded-full bg-white/[0.07] backdrop-blur-xl border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_2px_8px_rgba(0,0,0,0.25)] text-[#e2e8f0] text-sm font-mono"
+              className="flex items-center gap-1.5 text-[#64748b] text-sm font-mono cursor-default select-none"
             >
-              {/* Glass top-edge shine */}
-              <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.07] to-transparent pointer-events-none" aria-hidden="true" />
-              <span className="relative">{label}</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8]/40 flex-shrink-0" aria-hidden="true" />
+              {label}
             </span>
           ))}
         </div>
@@ -111,7 +113,7 @@ export default function Hero() {
         {/* Label */}
         <div className="flex items-center justify-center gap-2 bg-[#0f172a]/90 py-1">
           <span className="text-base leading-none">🚧</span>
-          <span className="text-[#facc15] font-mono text-[10px] tracking-widest uppercase opacity-60">
+          <span className="text-[#0ea5e9] font-mono text-[10px] tracking-widest uppercase opacity-60">
             Please pardon the dust &mdash; this site is still a work in progress!
           </span>
           <span className="text-base leading-none">🚧</span>

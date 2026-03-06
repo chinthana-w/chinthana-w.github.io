@@ -51,14 +51,18 @@ export default function Contact() {
 
         <p className="text-[#94a3b8] text-lg leading-relaxed mb-10">
           Whether you have a project in mind, a question, or just want to say
-          hi — my inbox is always open. I&apos;ll do my best to get back to you!
+          hi, my inbox is always open. You can also ask{" "}
+          <span className="text-[#38bdf8] font-semibold">Sif</span>, my AI
+          assistant (bottom right), for quick answers about my background and
+          work. I&apos;ll do my best to get back to you!
         </p>
 
         <a
           href={`mailto:chinthana.w@siu.edu`}
-          className="inline-block px-10 py-4 border-2 border-[#38bdf8] text-[#38bdf8] font-semibold rounded-lg hover:bg-[#38bdf8]/10 transition-colors duration-200 text-lg mb-12"
+          className="relative overflow-hidden inline-flex items-center justify-center px-10 py-4 rounded-full bg-[#38bdf8]/20 backdrop-blur-xl border border-[#38bdf8]/40 shadow-[inset_0_1px_0_rgba(56,189,248,0.25),0_4px_20px_rgba(56,189,248,0.15)] text-[#e2e8f0] font-semibold hover:bg-[#38bdf8]/30 transition-all duration-200 text-lg mb-12"
         >
-          Say Hello
+          <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none" aria-hidden="true" />
+          <span className="relative">Say Hello</span>
         </a>
 
         <div className="flex justify-center gap-8">

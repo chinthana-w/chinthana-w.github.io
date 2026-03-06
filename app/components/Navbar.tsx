@@ -79,9 +79,10 @@ export default function Navbar() {
         {/* Logo */}
         <a
           href="#hero"
-          className="text-base font-bold text-[#38bdf8] font-mono tracking-tight hover:opacity-80 transition-opacity"
+          className="relative overflow-hidden flex items-center px-4 py-1.5 rounded-full bg-[#38bdf8]/15 backdrop-blur-2xl border border-[#38bdf8]/30 shadow-[inset_0_1px_0_rgba(56,189,248,0.2),0_4px_16px_rgba(56,189,248,0.1)] text-[#38bdf8] font-bold font-mono tracking-tight hover:bg-[#38bdf8]/25 transition-all duration-200"
         >
-          chinthana-w
+          <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none" aria-hidden="true" />
+          <span className="relative">chinthana-w</span>
         </a>
 
         {/* Liquid-glass pill containing all nav links */}

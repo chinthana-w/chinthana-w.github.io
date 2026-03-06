@@ -234,10 +234,11 @@ export default function Projects() {
             href={`https://github.com/${GITHUB_USERNAME}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-[#38bdf8] text-[#38bdf8] rounded-lg hover:bg-[#38bdf8]/10 transition-colors duration-200"
+            className="relative overflow-hidden inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.07] backdrop-blur-xl border border-[#38bdf8]/30 shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_2px_12px_rgba(0,0,0,0.3)] text-[#38bdf8] font-semibold hover:bg-white/[0.12] transition-all duration-200"
           >
-            View All on GitHub
-            <ExternalLinkIcon />
+            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.07] to-transparent pointer-events-none" aria-hidden="true" />
+            <span className="relative flex items-center gap-2">View All on GitHub
+            <ExternalLinkIcon /></span>
           </a>
         </div>
       </div>
