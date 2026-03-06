@@ -150,7 +150,7 @@ export const NOTABLE_PROJECTS = [
   {
     title: "ABRUTECH Custom Processor & Compiler",
     description:
-      "Full processor architecture built from scratch in Verilog and implemented on an Altera DE2-115 FPGA using only ~1,000 logic elements. The 16-instruction ISA executes in 2.2 clock cycles on average and includes a special Address Maker for zero-overhead 2D matrix traversal and a shift-register bank for fast linear convolution—enabling programs as short as 30–40 bytes to downsample, upsample, and edge-detect 512×512 images. A companion Python compiler translates the human-readable ISA to machine code and catches syntax errors, while a simulator lets developers debug algorithms remotely before flashing the FPGA.",
+      "Full processor architecture built from scratch in Verilog and implemented on an Altera DE2-115 FPGA using only ~1,000 logic elements. The 16-instruction ISA executes in 2.2 clock cycles on average and includes a special Address Maker for zero-overhead 2D matrix traversal and a shift-register bank for fast linear convolution—enabling programs as short as 30–40 bytes to downsample, upsample, and edge-detect 256×256 images. A companion Python compiler translates the human-readable ISA to machine code and catches syntax errors, while a simulator lets developers debug algorithms remotely before flashing the FPGA.",
     tags: ["Assembly", "Verilog", "FPGA", "Computer Architecture", "Python"],
     href: "https://github.com/BlazeCode2/ABRUTECH_processor_automatic",
     featured: false,
