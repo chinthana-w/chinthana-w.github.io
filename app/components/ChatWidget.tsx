@@ -112,7 +112,7 @@ export default function ChatWidget() {
           ...prev,
           {
             role: "assistant",
-            text: data.reply ?? "Sorry, I couldn't get a response.",
+            text: data.reply || "Sorry, I couldn't get a response.",
           },
         ]);
       }

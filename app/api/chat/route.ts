@@ -188,6 +188,13 @@ export async function POST(req: NextRequest) {
   const text: string =
     data.candidates?.[0]?.content?.parts?.[0]?.text?.trim() ?? "";
 
+  if (!text) {
+    return NextResponse.json(
+      { error: "No response from model" },
+      { status: 502 }
+    );
+  }
+
   if (text.toUpperCase() === "ESCALATE") {
     return NextResponse.json({ escalate: true });
   }
