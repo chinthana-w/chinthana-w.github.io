@@ -8,10 +8,16 @@ interface Message {
   escalate?: boolean;
 }
 
-const INITIAL_MESSAGE: Message = {
-  role: "assistant",
-  text: "Hi! I can answer questions about Chinthana's background, skills, and projects.",
-};
+const INITIAL_MESSAGES: Message[] = [
+  {
+    role: "assistant",
+    text: "Hi! I can answer questions about Chinthana's background, skills, and projects.",
+  },
+  {
+    role: "assistant",
+    text: "Disclaimer: this is an experimental AI tool. Responses are generated automatically and may not be fully accurate. Always verify important details directly with Chinthana.",
+  },
+];
 
 function ChatBubbleIcon() {
   return (
@@ -49,10 +55,22 @@ function CloseIcon() {
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState<Message[]>([INITIAL_MESSAGE]);
+  const [messages, setMessages] = useState<Message[]>(INITIAL_MESSAGES);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [pageToken, setPageToken] = useState<string | null>(null);
+  const [tokenLoading, setTokenLoading] = useState(true);
   const bottomRef = useRef<HTMLDivElement>(null);
+
+  // Fetch a short-lived HMAC token so the server can verify the request
+  // originated from this page, not an external script.
+  useEffect(() => {
+    fetch("/api/chat-token")
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((d) => setPageToken(typeof d.token === "string" ? d.token : null))
+      .catch(() => {})
+      .finally(() => setTokenLoading(false));
+  }, []);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -73,6 +91,7 @@ export default function ChatWidget() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           message: userText,
+          token: pageToken,
           history: messages
             .filter((m) => !m.escalate)
             .slice(-6)
@@ -221,7 +240,7 @@ export default function ChatWidget() {
             />
             <button
               type="submit"
-              disabled={!input.trim() || loading}
+              disabled={!input.trim() || loading || tokenLoading}
               className="rounded-lg px-3 py-1.5 text-xs font-semibold transition-opacity disabled:opacity-40"
               style={{ background: "#38bdf8", color: "#0f172a" }}
             >

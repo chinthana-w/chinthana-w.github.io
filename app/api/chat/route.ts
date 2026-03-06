@@ -1,6 +1,68 @@
 import { NextRequest, NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { timingSafeEqual } from "crypto";
+import { makeToken, currentWindow } from "@/app/api/chat-token/route";
+
+// ---------------------------------------------------------------------------
+// Origin check
+// ---------------------------------------------------------------------------
+function isAllowedOrigin(req: NextRequest): boolean {
+  const allowed = process.env.CHAT_ALLOWED_ORIGIN;
+  if (!allowed) return true; // skip in local dev when env var is absent
+  return req.headers.get("origin") === allowed;
+}
+
+// ---------------------------------------------------------------------------
+// HMAC page-token check
+// ---------------------------------------------------------------------------
+function isValidPageToken(token: unknown): boolean {
+  const secret = process.env.CHAT_HMAC_SECRET;
+  if (!secret) return true; // skip in local dev when env var is absent
+  if (typeof token !== "string" || !/^[0-9a-f]{64}$/.test(token)) return false;
+  const provided = Buffer.from(token, "hex");
+  const w = currentWindow();
+  // Accept current window and the previous one to tolerate edge-of-window loads.
+  for (const win of [w, w - 1]) {
+    const expected = makeToken(secret, win);
+    if (provided.length === expected.length && timingSafeEqual(provided, expected))
+      return true;
+  }
+  return false;
+}
+
+// ---------------------------------------------------------------------------
+// IP rate limiting (best-effort; module-level, per serverless instance)
+// Max 10 requests per IP per 60 seconds.
+// ---------------------------------------------------------------------------
+const RATE_WINDOW_MS = 60_000;
+const RATE_MAX = 10;
+const ipLog = new Map<string, number[]>();
+let lastCleanup = Date.now();
+
+function isRateLimited(req: NextRequest): boolean {
+  // Periodic cleanup to prevent unbounded map growth.
+  const now = Date.now();
+  if (now - lastCleanup > RATE_WINDOW_MS) {
+    lastCleanup = now;
+    for (const [ip, ts] of ipLog) {
+      const fresh = ts.filter((t) => now - t < RATE_WINDOW_MS);
+      if (fresh.length === 0) ipLog.delete(ip);
+      else ipLog.set(ip, fresh);
+    }
+  }
+
+  const ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
+    req.headers.get("x-real-ip") ??
+    "unknown";
+
+  const ts = (ipLog.get(ip) ?? []).filter((t) => now - t < RATE_WINDOW_MS);
+  if (ts.length >= RATE_MAX) return true;
+  ts.push(now);
+  ipLog.set(ip, ts);
+  return false;
+}
 
 /** Strips LaTeX markup from resume.tex and returns readable plain text. */
 function parseResumeText(): string {
@@ -53,11 +115,23 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Not configured" }, { status: 500 });
   }
 
-  let body: { message?: unknown; history?: unknown };
+  if (!isAllowedOrigin(req)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  }
+
+  if (isRateLimited(req)) {
+    return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+  }
+
+  let body: { message?: unknown; history?: unknown; token?: unknown };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: "Invalid request" }, { status: 400 });
+  }
+
+  if (!isValidPageToken(body.token)) {
+    return NextResponse.json({ error: "Forbidden" }, { status: 403 });
   }
 
   const { message, history } = body;
