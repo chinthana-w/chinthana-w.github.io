@@ -8,6 +8,8 @@
   --muted: #94a3b8;
   --surface: #1e293b;
   --border: #334155;
+  /* Height of the fixed desktop navbar; also used for scroll-padding-top */
+  --navbar-height: 72px;
 }
 
 @theme inline {
@@ -23,6 +25,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height); /* offset for fixed desktop navbar */
 }
 
 body {

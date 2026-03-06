@@ -37,7 +37,7 @@ export default function Hero() {
 
         <p className="max-w-2xl mx-auto text-lg text-[#94a3b8] leading-relaxed mb-3">
           Software engineer with 4+ years across full-stack web development and
-          systems-level design &mdash; from scalable cloud applications to bare-metal
+          systems-level design from scalable cloud applications to bare-metal
           firmware. Currently pursuing a Master&apos;s in ECE at Southern Illinois
           University Carbondale.
         </p>
@@ -53,8 +53,18 @@ export default function Hero() {
             View My Work
           </a>
           <a
+            href="/resume.pdf"
+            download="Chinthana_Wimalasuriya_Resume.pdf"
+            className="px-8 py-3 border border-[#38bdf8] text-[#38bdf8] font-semibold rounded-lg hover:bg-[#38bdf8]/10 transition-colors duration-200 inline-flex items-center gap-2"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Get My Resume
+          </a>
+          <a
             href="#contact"
-            className="px-8 py-3 border border-[#38bdf8] text-[#38bdf8] font-semibold rounded-lg hover:bg-[#38bdf8]/10 transition-colors duration-200"
+            className="px-8 py-3 border border-[#475569] text-[#94a3b8] font-semibold rounded-lg hover:bg-[#1e293b] transition-colors duration-200"
           >
             Get In Touch
           </a>
@@ -69,9 +79,11 @@ export default function Hero() {
           ].map(({ label }) => (
             <span
               key={label}
-              className="px-4 py-1.5 rounded-full bg-[#1e293b] border border-[#334155] text-[#94a3b8] text-sm font-mono"
+              className="relative px-4 py-1.5 rounded-full bg-white/[0.07] backdrop-blur-xl border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_2px_8px_rgba(0,0,0,0.25)] text-[#e2e8f0] text-sm font-mono"
             >
-              {label}
+              {/* Glass top-edge shine */}
+              <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.07] to-transparent pointer-events-none" aria-hidden="true" />
+              <span className="relative">{label}</span>
             </span>
           ))}
         </div>

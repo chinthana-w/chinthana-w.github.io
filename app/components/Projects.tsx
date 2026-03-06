@@ -94,7 +94,7 @@ export default function Projects() {
     <section id="projects" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-[#e2e8f0] mb-2">
-          <span className="text-[#38bdf8] font-mono text-xl mr-3">04.</span>
+          <span className="text-[#38bdf8] font-mono text-xl mr-3">05.</span>
           GitHub Showcase
         </h2>
         <div className="w-48 h-0.5 bg-[#334155] mb-4" />
