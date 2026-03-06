@@ -37,7 +37,7 @@ export default function Hero() {
 
         <p className="max-w-2xl mx-auto text-lg text-[#94a3b8] leading-relaxed mb-3">
           Software engineer with 4+ years across full-stack web development and
-          systems-level design &mdash; from scalable cloud applications to bare-metal
+          systems-level design from scalable cloud applications to bare-metal
           firmware. Currently pursuing a Master&apos;s in ECE at Southern Illinois
           University Carbondale.
         </p>
@@ -60,7 +60,7 @@ export default function Hero() {
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
-            Resume
+            Get My Resume
           </a>
           <a
             href="#contact"
