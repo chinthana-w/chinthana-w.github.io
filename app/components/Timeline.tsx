@@ -52,26 +52,27 @@ function TimelineCard({
   align: "left" | "right";
 }) {
   const isWork = item.type === "work";
-  const accentText = isWork ? "text-[#38bdf8]" : "text-[#818cf8]";
-  const accentBorder = isWork ? "border-[#38bdf8]/50" : "border-[#818cf8]/50";
-  const accentBg = isWork ? "bg-[#38bdf8]/10" : "bg-[#818cf8]/10";
+  const accentText = isWork ? "text-[#0071e3]" : "text-[#5e5ce6]";
+  const accentBorder = isWork ? "border-[#0071e3]/40" : "border-[#5e5ce6]/40";
+  const accentBg = isWork ? "bg-[#0071e3]/8" : "bg-[#5e5ce6]/8";
+  const cardBg = isWork ? "bg-[#f0f7ff]" : "bg-[#f5f4ff]";
   const accentGlow = isWork
-    ? "hover:shadow-[0_0_32px_rgba(56,189,248,0.1)]"
-    : "hover:shadow-[0_0_32px_rgba(129,140,248,0.1)]";
-  const bulletColor = isWork ? "text-[#38bdf8]" : "text-[#818cf8]";
+    ? "hover:shadow-[0_4px_24px_rgba(0,113,227,0.12)]"
+    : "hover:shadow-[0_4px_24px_rgba(94,92,230,0.12)]";
+  const bulletColor = isWork ? "text-[#0071e3]" : "text-[#5e5ce6]";
 
   return (
     <div
-      className={`group bg-[#0f172a] border border-[#334155] rounded-xl p-5 transition-all duration-300 hover:border-opacity-100 ${accentBorder} ${accentGlow} cursor-default`}
+      className={`group ${cardBg} border rounded-xl p-5 transition-all duration-300 hover:border-opacity-100 shadow-sm ${accentBorder} ${accentGlow} cursor-default`}
     >
       {/* Header — always visible */}
       <div className={`flex items-start gap-3 ${align === "right" ? "flex-row-reverse text-right" : ""}`}>
         <div className="flex-1 min-w-0">
           <p className={`font-mono text-xs mb-1 ${accentText}`}>{item.period}</p>
-          <h3 className="text-[#e2e8f0] font-bold text-sm leading-snug mb-0.5">
+          <h3 className="text-[#1d1d1f] font-bold text-sm leading-snug mb-0.5">
             {item.title}
           </h3>
-          <p className="text-[#64748b] text-xs">
+          <p className="text-[#3a3a3a] text-xs font-medium">
             {item.organization} &middot; {item.location}
           </p>
         </div>
@@ -106,12 +107,12 @@ function TimelineCard({
       {/* Highlights popup — expands on hover */}
       <div className="overflow-hidden max-h-0 group-hover:max-h-[32rem] transition-all duration-500 ease-in-out">
         <ul
-          className={`space-y-2 border-t border-[#334155] pt-4 mt-1 ${align === "right" ? "text-right" : "text-left"}`}
+          className={`space-y-2 border-t border-[#e8e8ed] pt-4 mt-1 ${align === "right" ? "text-right" : "text-left"}`}
         >
           {item.highlights.map((point, j) => (
             <li
               key={j}
-              className={`flex items-start gap-2 text-xs text-[#94a3b8] leading-relaxed ${align === "right" ? "flex-row-reverse" : ""}`}
+              className={`flex items-start gap-2 text-xs text-[#1a1a1a] leading-relaxed ${align === "right" ? "flex-row-reverse" : ""}`}
             >
               <span className={`${bulletColor} mt-0.5 flex-shrink-0`}>▹</span>
               <span>{point}</span>
@@ -125,27 +126,27 @@ function TimelineCard({
 
 export default function Timeline() {
   return (
-    <section id="experience" className="py-24 px-6 bg-[#1e293b]/50">
+    <section id="experience" className="py-24 px-6 bg-white">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-[#e2e8f0] mb-2">
-          <span className="text-[#38bdf8] font-mono text-xl mr-3">03.</span>
+        <h2 className="text-3xl font-bold text-[#1d1d1f] mb-2">
+          <span className="text-[#0071e3] font-mono text-xl mr-3">03.</span>
           Experience
         </h2>
-        <div className="w-40 h-0.5 bg-[#334155] mb-6" />
+        <div className="w-40 h-0.5 bg-[#d2d2d7] mb-6" />
 
         {/* Legend */}
         <div className="flex gap-6 mb-12">
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full border-2 border-[#38bdf8] bg-[#0f172a] flex-shrink-0" />
-            <span className="text-[#94a3b8] text-xs font-mono">Work</span>
+            <span className="w-3 h-3 rounded-full border-2 border-[#0071e3] bg-white flex-shrink-0" />
+            <span className="text-[#3a3a3a] text-xs font-mono">Work</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full border-2 border-[#818cf8] bg-[#0f172a] flex-shrink-0" />
-            <span className="text-[#94a3b8] text-xs font-mono">Education</span>
+            <span className="w-3 h-3 rounded-full border-2 border-[#5e5ce6] bg-white flex-shrink-0" />
+            <span className="text-[#3a3a3a] text-xs font-mono">Education</span>
           </div>
           <div className="flex items-center gap-2">
             <svg
-              className="w-3 h-3 text-[#94a3b8]"
+              className="w-3 h-3 text-[#3a3a3a]"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -158,7 +159,7 @@ export default function Timeline() {
                 d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5"
               />
             </svg>
-            <span className="text-[#94a3b8] text-xs font-mono">
+            <span className="text-[#3a3a3a] text-xs font-mono">
               Hover a card for details
             </span>
           </div>
@@ -166,15 +167,15 @@ export default function Timeline() {
 
         <div className="relative">
           {/* Vertical center line — left-aligned on mobile, centered on md+ */}
-          <div className="absolute left-[0.6875rem] top-0 bottom-0 w-px bg-gradient-to-b from-[#334155] via-[#334155] to-transparent md:left-1/2 md:-translate-x-px" />
+          <div className="absolute left-[0.6875rem] top-0 bottom-0 w-px bg-gradient-to-b from-[#d2d2d7] via-[#d2d2d7] to-transparent md:left-1/2 md:-translate-x-px" />
 
           <div className="flex flex-col gap-10">
             {TIMELINE_ITEMS.map((item, i) => {
               const isWork = item.type === "work";
-              const dotBorder = isWork ? "border-[#38bdf8]" : "border-[#818cf8]";
+                  const dotBorder = isWork ? "border-[#0071e3]" : "border-[#5e5ce6]";
               const dotGlow = isWork
-                ? "shadow-[0_0_8px_rgba(56,189,248,0.6)]"
-                : "shadow-[0_0_8px_rgba(129,140,248,0.6)]";
+                ? "shadow-[0_0_8px_rgba(0,113,227,0.4)]"
+                : "shadow-[0_0_8px_rgba(94,92,230,0.4)]";
               // Even items: card on LEFT on desktop (reversed on mobile → right)
               // Odd items:  card on RIGHT on desktop
               const isCardLeft = i % 2 === 0;
@@ -183,7 +184,7 @@ export default function Timeline() {
                 <div key={i} className="relative">
                   {/* Dot on the line */}
                   <div
-                    className={`absolute left-[0.6875rem] top-5 -translate-x-1/2 w-[0.875rem] h-[0.875rem] rounded-full border-2 ${dotBorder} ${dotGlow} bg-[#0f172a] z-10 md:left-1/2`}
+                    className={`absolute left-[0.6875rem] top-5 -translate-x-1/2 w-[0.875rem] h-[0.875rem] rounded-full border-2 ${dotBorder} ${dotGlow} bg-white z-10 md:left-1/2`}
                     aria-hidden="true"
                   />
 
@@ -196,7 +197,7 @@ export default function Timeline() {
                       {isCardLeft ? (
                         <TimelineCard item={item} align="right" />
                       ) : (
-                        <span className={`font-mono text-xs ${isWork ? "text-[#38bdf8]/70" : "text-[#818cf8]/70"}`}>
+                        <span className={`font-mono text-xs font-semibold ${isWork ? "text-[#0071e3]" : "text-[#5e5ce6]"}`}>
                           {item.period}
                         </span>
                       )}
@@ -209,7 +210,7 @@ export default function Timeline() {
                       {!isCardLeft ? (
                         <TimelineCard item={item} align="left" />
                       ) : (
-                        <span className={`font-mono text-xs ${isWork ? "text-[#38bdf8]/70" : "text-[#818cf8]/70"}`}>
+                        <span className={`font-mono text-xs font-semibold ${isWork ? "text-[#0071e3]" : "text-[#5e5ce6]"}`}>
                           {item.period}
                         </span>
                       )}

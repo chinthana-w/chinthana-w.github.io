@@ -56,19 +56,19 @@ const HOBBIES: Hobby[] = [
 
 export default function Hobbies() {
   return (
-    <section id="hobbies" className="py-24 px-6 bg-[#1e293b]/30">
+    <section id="hobbies" className="py-24 px-6 bg-[#fafafa]">
       <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-[#e2e8f0] mb-2">
-          <span className="text-[#38bdf8] font-mono text-xl mr-3">06.</span>
+        <h2 className="text-3xl font-bold text-[#1d1d1f] mb-2">
+          <span className="text-[#0071e3] font-mono text-xl mr-3">06.</span>
           Off the Clock
         </h2>
-        <div className="w-48 h-0.5 bg-[#334155] mb-12" />
+        <div className="w-48 h-0.5 bg-[#d2d2d7] mb-12" />
 
         <div className="grid md:grid-cols-3 gap-6">
           {HOBBIES.map((hobby) => (
             <div
               key={hobby.title}
-              className="group bg-[#0f172a] border border-[#334155] rounded-2xl overflow-hidden flex flex-col hover:border-[#38bdf8]/50 transition-all duration-300 hover:shadow-[0_0_32px_rgba(56,189,248,0.07)]"
+              className="group bg-[#f0f4ff] border border-[#c7d7f5] rounded-2xl overflow-hidden flex flex-col hover:border-[#0071e3]/40 transition-all duration-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)] shadow-sm"
             >
               {/* Photo strip — shown when images are provided */}
               {hobby.images.length > 0 && (
@@ -97,14 +97,14 @@ export default function Hobbies() {
 
               <div className="p-8 flex flex-col flex-1">
               {hobby.images.length === 0 && (
-                <div className="text-[#38bdf8]/60 group-hover:text-[#38bdf8] transition-colors duration-300 mb-5">
+                <div className="text-[#0071e3]/50 group-hover:text-[#0071e3] transition-colors duration-300 mb-5">
                   {hobby.icon}
                 </div>
               )}
 
-              <h3 className="text-lg font-bold text-[#e2e8f0] mb-3">{hobby.title}</h3>
+              <h3 className="text-lg font-bold text-[#1d1d1f] mb-3">{hobby.title}</h3>
 
-              <p className="text-[#94a3b8] text-sm leading-relaxed mb-6 flex-1">
+              <p className="text-[#1a1a1a] text-sm leading-relaxed mb-6 flex-1">
                 {hobby.description}
               </p>
 
@@ -112,7 +112,7 @@ export default function Hobbies() {
                 {hobby.highlights.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs font-mono text-[#38bdf8] bg-[#38bdf8]/10 px-2.5 py-1 rounded-full"
+                    className="text-xs font-mono text-[#0071e3] bg-[#0071e3]/8 px-2.5 py-1 rounded-full"
                   >
                     {tag}
                   </span>

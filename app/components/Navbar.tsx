@@ -74,38 +74,33 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Desktop: fixed top nav ── */}
+      {/* ── Desktop: fixed top nav — transparent bar, one big pill in center ── */}
       <nav className="fixed top-0 left-0 right-0 z-50 hidden md:flex items-center justify-between px-8 py-5">
-        {/* Logo */}
+        {/* Logo pill */}
         <a
           href="#hero"
-          className="relative overflow-hidden flex items-center px-4 py-1.5 rounded-full bg-[#38bdf8]/15 backdrop-blur-2xl border border-[#38bdf8]/30 shadow-[inset_0_1px_0_rgba(56,189,248,0.2),0_4px_16px_rgba(56,189,248,0.1)] text-[#38bdf8] font-bold font-mono tracking-tight hover:bg-[#38bdf8]/25 transition-all duration-200"
+          className="relative overflow-hidden flex items-center px-4 py-1.5 rounded-full bg-white/40 backdrop-blur-2xl border border-white/40 shadow-[0_4px_20px_rgba(0,0,0,0.10),inset_0_1px_0_rgba(255,255,255,0.8)] text-[#0071e3] font-bold font-mono tracking-tight hover:bg-white/55 transition-all duration-200"
         >
-          <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none" aria-hidden="true" />
+          <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/25 to-transparent pointer-events-none" aria-hidden="true" />
           <span className="relative">chinthana-w</span>
         </a>
 
-        {/* Liquid-glass pill containing all nav links */}
-        <div className="relative flex items-center gap-0.5 px-2 py-1.5 rounded-full bg-[#0f172a]/65 backdrop-blur-2xl border border-white/[0.09] shadow-[0_8px_32px_rgba(0,0,0,0.45),inset_0_1px_0_rgba(255,255,255,0.08)]">
-          {/* Top-edge glass shine */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.06] to-transparent pointer-events-none" aria-hidden="true" />
-
+        {/* ONE big outer glass pill — active item gets its own inner pill */}
+        <div className="relative flex items-center px-1.5 py-1.5 rounded-full bg-white/30 backdrop-blur-2xl border border-white/35 shadow-[0_8px_32px_rgba(0,0,0,0.10),inset_0_1px_0_rgba(255,255,255,0.65)]">
+          <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/20 to-transparent pointer-events-none" aria-hidden="true" />
           {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.href;
             return (
               <a
                 key={link.href}
                 href={link.href}
-                className={`relative z-10 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-medium transition-all duration-300 select-none ${
-                  isActive
-                    ? "text-[#e2e8f0] scale-[1.06]"
-                    : "text-[#94a3b8] hover:text-[#cbd5e1]"
+                className={`relative flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 select-none ${
+                  isActive ? "text-[#1d1d1f]" : "text-[#555] hover:text-[#1d1d1f]"
                 }`}
               >
-                {/* Magnifier: active inner oval */}
                 {isActive && (
                   <span
-                    className="absolute inset-0 rounded-full bg-white/[0.13] border border-white/[0.14] shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_2px_10px_rgba(56,189,248,0.15)]"
+                    className="absolute inset-0 rounded-full bg-white/70 border border-white/55 shadow-[0_2px_10px_rgba(0,0,0,0.09)]"
                     aria-hidden="true"
                   />
                 )}
@@ -116,40 +111,35 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* GitHub button */}
+        {/* GitHub pill */}
         <a
           href="https://github.com/chinthana-w"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm px-4 py-2 rounded-full bg-[#0f172a]/65 backdrop-blur-2xl border border-white/[0.09] shadow-[0_4px_16px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.08)] text-[#38bdf8] hover:text-[#e2e8f0] hover:bg-white/[0.08] transition-all duration-200 font-medium"
+          className="relative overflow-hidden text-sm px-4 py-2 rounded-full bg-white/40 backdrop-blur-2xl border border-white/40 shadow-[0_4px_20px_rgba(0,0,0,0.10),inset_0_1px_0_rgba(255,255,255,0.8)] text-[#0071e3] hover:bg-white/55 hover:text-[#1d1d1f] transition-all duration-200 font-semibold"
         >
-          GitHub
+          <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/25 to-transparent pointer-events-none" aria-hidden="true" />
+          <span className="relative">GitHub</span>
         </a>
       </nav>
 
-      {/* ── Mobile: fixed bottom floating glass-pill nav ── */}
-      {/* Replaces the transparent top nav entirely, so content never clips through it */}
+      {/* ── Mobile: fixed bottom nav — one big pill, active inner pill ── */}
       <nav className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 md:hidden">
-        <div className="relative flex items-center px-1.5 py-1.5 rounded-full bg-[#0f172a]/82 backdrop-blur-2xl border border-white/[0.09] shadow-[0_8px_32px_rgba(0,0,0,0.55),inset_0_1px_0_rgba(255,255,255,0.08)]">
-          {/* Top-edge glass shine */}
-          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.06] to-transparent pointer-events-none" aria-hidden="true" />
-
+        <div className="relative flex items-center px-1.5 py-1.5 rounded-full bg-white/30 backdrop-blur-2xl border border-white/35 shadow-[0_8px_32px_rgba(0,0,0,0.10),inset_0_1px_0_rgba(255,255,255,0.65)]">
+          <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/20 to-transparent pointer-events-none" aria-hidden="true" />
           {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.href;
             return (
               <a
                 key={link.href}
                 href={link.href}
-                className={`relative z-10 flex flex-col items-center gap-0.5 px-3 py-2 rounded-full font-medium transition-all duration-300 select-none ${
-                  isActive
-                    ? "text-[#e2e8f0] scale-[1.08]"
-                    : "text-[#64748b]"
+                className={`relative flex flex-col items-center gap-0.5 px-3 py-2 rounded-full font-semibold transition-all duration-300 select-none ${
+                  isActive ? "text-[#1d1d1f]" : "text-[#555]"
                 }`}
               >
-                {/* Magnifier: active inner oval */}
                 {isActive && (
                   <span
-                    className="absolute inset-0 rounded-full bg-white/[0.14] border border-white/[0.14] shadow-[inset_0_1px_0_rgba(255,255,255,0.2),0_2px_10px_rgba(56,189,248,0.15)]"
+                    className="absolute inset-0 rounded-full bg-white/70 border border-white/55 shadow-[0_2px_10px_rgba(0,0,0,0.09)]"
                     aria-hidden="true"
                   />
                 )}

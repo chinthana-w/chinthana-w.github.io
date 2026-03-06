@@ -263,24 +263,24 @@ export default function ChatWidget() {
       {open && (
         <div
           className="flex flex-col overflow-hidden rounded-2xl shadow-2xl"
-          style={{ width: "320px", background: "#0f172a", border: "1px solid #334155" }}
+          style={{ width: "320px", background: "#ffffff", border: "1px solid #d2d2d7" }}
         >
           {/* Header */}
           <div
             className="flex items-center justify-between px-4 py-3"
-            style={{ background: "#1e293b", borderBottom: "1px solid #334155" }}
+            style={{ background: "#f5f5f7", borderBottom: "1px solid #d2d2d7" }}
           >
             <div className="flex items-center gap-2">
-              <span style={{ color: "#38bdf8" }}>
+              <span style={{ color: "#0071e3" }}>
                 <SifIcon />
               </span>
-              <span className="text-sm font-semibold" style={{ color: "#e2e8f0" }}>
+              <span className="text-sm font-semibold" style={{ color: "#1d1d1f" }}>
                 Sif
               </span>
             </div>
             <button
               onClick={() => setOpen(false)}
-              style={{ color: "#94a3b8" }}
+              style={{ color: "#6e6e73" }}
               aria-label="Close chat"
             >
               <CloseIcon />
@@ -302,16 +302,16 @@ export default function ChatWidget() {
                     className="rounded-xl px-3 py-2 text-xs leading-relaxed"
                     style={{
                       maxWidth: "85%",
-                      background: "#1e293b",
-                      border: "1px solid #334155",
-                      color: "#94a3b8",
+                      background: "#f5f5f7",
+                      border: "1px solid #d2d2d7",
+                      color: "#6e6e73",
                     }}
                   >
                     That&apos;s a great question for Chinthana directly.{" "}
                     <a
                       href="mailto:chinthana.w@siu.edu?subject=Question%20from%20Portfolio"
                       className="font-semibold underline"
-                      style={{ color: "#38bdf8" }}
+                      style={{ color: "#0071e3" }}
                     >
                       Send an email
                     </a>
@@ -322,11 +322,11 @@ export default function ChatWidget() {
                     style={{
                       maxWidth: "85%",
                       ...(m.role === "user"
-                        ? { background: "#38bdf8", color: "#0f172a" }
+                        ? { background: "#0071e3", color: "#ffffff" }
                         : {
-                            background: "#1e293b",
-                            color: "#e2e8f0",
-                            border: "1px solid #334155",
+                            background: "#f5f5f7",
+                            color: "#1d1d1f",
+                            border: "1px solid #d2d2d7",
                           }),
                     }}
                   >
@@ -340,9 +340,9 @@ export default function ChatWidget() {
                 <div
                   className="rounded-xl px-3 py-2 text-xs"
                   style={{
-                    background: "#1e293b",
-                    color: "#94a3b8",
-                    border: "1px solid #334155",
+                    background: "#f5f5f7",
+                    color: "#6e6e73",
+                    border: "1px solid #d2d2d7",
                   }}
                 >
                   Thinking...
@@ -356,7 +356,7 @@ export default function ChatWidget() {
           <form
             onSubmit={handleSubmit}
             className="flex gap-2 p-2"
-            style={{ borderTop: "1px solid #334155" }}
+            style={{ borderTop: "1px solid #d2d2d7" }}
           >
             <input
               value={input}
@@ -365,16 +365,16 @@ export default function ChatWidget() {
               maxLength={500}
               className="flex-1 rounded-lg px-3 py-1.5 text-xs outline-none"
               style={{
-                background: "#1e293b",
-                border: "1px solid #334155",
-                color: "#e2e8f0",
+                background: "#f5f5f7",
+                border: "1px solid #d2d2d7",
+                color: "#1d1d1f",
               }}
             />
             <button
               type="submit"
               disabled={!input.trim() || loading}
               className="rounded-full px-3 py-1.5 text-xs font-semibold transition-opacity disabled:opacity-40"
-              style={{ background: "#38bdf8", color: "#0f172a" }}
+              style={{ background: "#0071e3", color: "#ffffff" }}
             >
               Send
             </button>
@@ -385,7 +385,7 @@ export default function ChatWidget() {
       {/* Toggle button */}
       <button
         onClick={() => setOpen((o) => !o)}
-        className="relative overflow-hidden flex items-center gap-2 px-4 py-3 rounded-full backdrop-blur-xl bg-[#38bdf8]/20 border border-[#38bdf8]/40 shadow-[inset_0_1px_0_rgba(56,189,248,0.25),0_4px_24px_rgba(56,189,248,0.2),0_2px_12px_rgba(0,0,0,0.4)] text-[#e2e8f0] transition-all duration-200 hover:scale-105 hover:bg-[#38bdf8]/30"
+        className="relative overflow-hidden flex items-center gap-2 px-4 py-3 rounded-full backdrop-blur-xl bg-[#0071e3] border border-[#0064c8] shadow-[0_4px_24px_rgba(0,113,227,0.30),0_2px_12px_rgba(0,0,0,0.10)] text-white transition-all duration-200 hover:scale-105 hover:bg-[#0064c8]"
         aria-label={open ? "Close Sif" : "Ask Sif"}
       >
         <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.10] to-transparent pointer-events-none" aria-hidden="true" />

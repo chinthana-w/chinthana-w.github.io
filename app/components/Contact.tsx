@@ -41,25 +41,25 @@ const ICONS: Record<string, React.FC> = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 px-6 bg-[#1e293b]/50">
+    <section id="contact" className="py-24 px-6 bg-white">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-[#e2e8f0] mb-2">
-          <span className="text-[#38bdf8] font-mono text-xl mr-3">07.</span>
+        <h2 className="text-3xl font-bold text-[#1d1d1f] mb-2">
+          <span className="text-[#0071e3] font-mono text-xl mr-3">07.</span>
           Get In Touch
         </h2>
-        <div className="w-36 h-0.5 bg-[#334155] mx-auto mb-8" />
+        <div className="w-36 h-0.5 bg-[#d2d2d7] mx-auto mb-8" />
 
-        <p className="text-[#94a3b8] text-lg leading-relaxed mb-10">
+        <p className="text-[#1a1a1a] text-lg leading-relaxed mb-10">
           Whether you have a project in mind, a question, or just want to say
           hi, my inbox is always open. You can also ask{" "}
-          <span className="text-[#38bdf8] font-semibold">Sif</span>, my AI
+          <span className="text-[#0071e3] font-semibold">Sif</span>, my AI
           assistant (bottom right), for quick answers about my background and
           work. I&apos;ll do my best to get back to you!
         </p>
 
         <a
           href={`mailto:chinthana.w@siu.edu`}
-          className="relative overflow-hidden inline-flex items-center justify-center px-10 py-4 rounded-full bg-[#38bdf8]/20 backdrop-blur-xl border border-[#38bdf8]/40 shadow-[inset_0_1px_0_rgba(56,189,248,0.25),0_4px_20px_rgba(56,189,248,0.15)] text-[#e2e8f0] font-semibold hover:bg-[#38bdf8]/30 transition-all duration-200 text-lg mb-12"
+          className="relative overflow-hidden inline-flex items-center justify-center px-10 py-4 rounded-full bg-[#0071e3] border border-[#0071e3] shadow-[0_4px_20px_rgba(0,113,227,0.25)] text-white font-semibold hover:bg-[#0064c8] transition-all duration-200 text-lg mb-12"
         >
           <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none" aria-hidden="true" />
           <span className="relative">Say Hello</span>
@@ -74,7 +74,7 @@ export default function Contact() {
                 href={link.href}
                 target={link.icon !== "email" ? "_blank" : undefined}
                 rel={link.icon !== "email" ? "noopener noreferrer" : undefined}
-                className="text-[#94a3b8] hover:text-[#38bdf8] transition-colors duration-200"
+                className="text-[#6e6e73] hover:text-[#0071e3] transition-colors duration-200"
                 aria-label={link.label}
               >
                 {Icon && <Icon />}
@@ -83,13 +83,13 @@ export default function Contact() {
           })}
         </div>
 
-        <p className="mt-8 text-[#94a3b8] text-sm font-mono">
-          Also available on{" "}
+        <p className="mt-8 text-[#6e6e73] text-sm font-mono">
+          This site is open source and is available on{" "}
           <a
-            href={`https://github.com/${GITHUB_USERNAME}`}
+            href={`https://github.com/chinthana-w/chinthana-w.github.io`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#38bdf8] hover:underline"
+            className="text-[#0071e3] hover:underline"
           >
             GitHub
           </a>
