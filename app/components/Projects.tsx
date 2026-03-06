@@ -93,18 +93,18 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-[#e2e8f0] mb-2">
-          <span className="text-[#38bdf8] font-mono text-xl mr-3">05.</span>
+        <h2 className="text-3xl font-bold text-[#1d1d1f] mb-2">
+          <span className="text-[#0071e3] font-mono text-xl mr-3">05.</span>
           GitHub Showcase
         </h2>
-        <div className="w-48 h-0.5 bg-[#334155] mb-4" />
-        <p className="text-[#94a3b8] mb-12">
+        <div className="w-48 h-0.5 bg-[#d2d2d7] mb-4" />
+        <p className="text-[#6e6e73] mb-12">
           What I&apos;m working on these days. Check out{" "}
           <a
             href={`https://github.com/${GITHUB_USERNAME}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#38bdf8] hover:underline"
+            className="text-[#0071e3] hover:underline"
           >
             my GitHub profile
           </a>{" "}
@@ -116,11 +116,11 @@ export default function Projects() {
             {Array.from({ length: 6 }).map((_, i) => (
               <div
                 key={i}
-                className="bg-[#1e293b] border border-[#334155] rounded-xl p-6 animate-pulse"
+                className="bg-white border border-[#d2d2d7] rounded-xl p-6 animate-pulse"
               >
-                <div className="h-5 bg-[#334155] rounded w-3/4 mb-3" />
-                <div className="h-4 bg-[#334155] rounded w-full mb-2" />
-                <div className="h-4 bg-[#334155] rounded w-5/6" />
+                <div className="h-5 bg-[#e8e8ed] rounded w-3/4 mb-3" />
+                <div className="h-4 bg-[#e8e8ed] rounded w-full mb-2" />
+                <div className="h-4 bg-[#e8e8ed] rounded w-5/6" />
               </div>
             ))}
           </div>
@@ -128,14 +128,14 @@ export default function Projects() {
 
         {error && (
           <div className="text-center py-16">
-            <p className="text-[#94a3b8] mb-4">
+            <p className="text-[#6e6e73] mb-4">
               Unable to load projects right now.
             </p>
             <a
               href={`https://github.com/${GITHUB_USERNAME}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#38bdf8] hover:underline"
+              className="text-[#0071e3] hover:underline"
             >
               View GitHub Profile →
             </a>
@@ -144,7 +144,7 @@ export default function Projects() {
 
         {!loading && !error && repos.length === 0 && (
           <div className="text-center py-16">
-            <p className="text-[#94a3b8]">No public repositories found.</p>
+            <p className="text-[#6e6e73]">No public repositories found.</p>
           </div>
         )}
 
@@ -153,12 +153,12 @@ export default function Projects() {
             {repos.map((repo) => (
               <article
                 key={repo.id}
-                className="group bg-[#1e293b] border border-[#334155] rounded-xl p-6 flex flex-col hover:border-[#38bdf8]/50 hover:-translate-y-1 transition-all duration-300"
+                className="group bg-[#f8f8fc] border border-[#ddddf5] rounded-xl p-6 flex flex-col hover:border-[#0071e3]/40 hover:-translate-y-1 transition-all duration-300 shadow-sm"
               >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-2">
                     <svg
-                      className="w-5 h-5 text-[#38bdf8]"
+                      className="w-5 h-5 text-[#0071e3]"
                       fill="currentColor"
                       viewBox="0 0 16 16"
                       aria-hidden="true"
@@ -169,7 +169,7 @@ export default function Projects() {
                       href={repo.html_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="font-semibold text-[#e2e8f0] group-hover:text-[#38bdf8] transition-colors truncate"
+                      className="font-semibold text-[#1d1d1f] group-hover:text-[#0071e3] transition-colors truncate"
                     >
                       {repo.name}
                     </a>
@@ -178,14 +178,14 @@ export default function Projects() {
                     href={repo.html_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#94a3b8] hover:text-[#38bdf8] transition-colors flex-shrink-0 ml-2"
+                    className="text-[#6e6e73] hover:text-[#0071e3] transition-colors flex-shrink-0 ml-2"
                     aria-label={`Open ${repo.name} on GitHub`}
                   >
                     <ExternalLinkIcon />
                   </a>
                 </div>
 
-                <p className="text-[#94a3b8] text-sm leading-relaxed flex-1 mb-4">
+                <p className="text-[#1a1a1a] text-sm leading-relaxed flex-1 mb-4">
                   {repo.description}
                 </p>
 
@@ -194,7 +194,7 @@ export default function Projects() {
                     {repo.topics.slice(0, 3).map((topic) => (
                       <span
                         key={topic}
-                        className="text-xs px-2 py-0.5 rounded-full bg-[#38bdf8]/10 text-[#38bdf8] font-mono"
+                        className="text-xs px-2 py-0.5 rounded-full bg-[#0071e3]/8 text-[#0071e3] font-mono"
                       >
                         {topic}
                       </span>
@@ -202,24 +202,24 @@ export default function Projects() {
                   </div>
                 )}
 
-                <div className="flex items-center gap-4 text-sm text-[#94a3b8] mt-auto">
+                <div className="flex items-center gap-4 text-sm text-[#6e6e73] mt-auto">
                   {repo.language && (
                     <span className="flex items-center gap-1.5">
                       <span
                         className="w-3 h-3 rounded-full"
                         style={{
                           backgroundColor:
-                            LANGUAGE_COLORS[repo.language] ?? "#94a3b8",
+                            LANGUAGE_COLORS[repo.language] ?? "#6e6e73",
                         }}
                       />
                       <span className="font-mono">{repo.language}</span>
                     </span>
                   )}
-                  <span className="flex items-center gap-1 text-[#94a3b8]">
+                  <span className="flex items-center gap-1 text-[#6e6e73]">
                     <StarIcon />
                     {repo.stargazers_count}
                   </span>
-                  <span className="flex items-center gap-1 text-[#94a3b8]">
+                  <span className="flex items-center gap-1 text-[#6e6e73]">
                     <ForkIcon />
                     {repo.forks_count}
                   </span>
@@ -234,10 +234,11 @@ export default function Projects() {
             href={`https://github.com/${GITHUB_USERNAME}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-[#38bdf8] text-[#38bdf8] rounded-lg hover:bg-[#38bdf8]/10 transition-colors duration-200"
+            className="relative overflow-hidden inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#0071e3]/8 border border-[#0071e3]/25 shadow-[0_2px_12px_rgba(0,113,227,0.08)] text-[#0071e3] font-semibold hover:bg-[#0071e3]/14 transition-all duration-200"
           >
-            View All on GitHub
-            <ExternalLinkIcon />
+            <span className="absolute inset-0 rounded-full bg-gradient-to-b from-white/[0.07] to-transparent pointer-events-none" aria-hidden="true" />
+            <span className="relative flex items-center gap-2">View All on GitHub
+            <ExternalLinkIcon /></span>
           </a>
         </div>
       </div>
