@@ -32,12 +32,12 @@ export default function Hero() {
         </h1>
 
         <h2 className="text-3xl md:text-5xl font-bold text-[#6e6e73] mb-6">
-          I build things for a smarter world.
+          Software & Systems Engineer.
         </h2>
 
         <p className="max-w-2xl mx-auto text-lg text-[#6e6e73] leading-relaxed mb-3">
-          System engineer with 4+ years across full-stack web development and
-          systems-level design from scalable cloud applications to bare-metal
+          Software Engineer with 4+ years of experience across full-stack web development and
+          systems-level design, from scalable cloud applications to bare-metal
           firmware. Currently pursuing a Master&apos;s in ECE at Southern Illinois
           University Carbondale.
         </p>
@@ -75,8 +75,8 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2">
           {[
-            "4+ yrs experience",
-            "Full-Stack",
+            "4+ YOE Software Engineer",
+            "Full-Stack Web Dev",
             "Systems & Embedded",
             "M.S. ECE @ SIUC",
           ].map((label) => (
