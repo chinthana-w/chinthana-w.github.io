@@ -32,7 +32,7 @@ export default function Hero() {
         </h1>
 
         <h2 className="text-3xl md:text-5xl font-bold text-[#6e6e73] mb-6">
-          I build things for a smarter world
+          I build things for a smarter world.
         </h2>
 
         <p className="max-w-2xl mx-auto text-lg text-[#6e6e73] leading-relaxed mb-3">
