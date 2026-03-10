@@ -92,13 +92,13 @@ export const SKILLS = [
   },
   {
     category: "AI & Agentic Coding",
-    items: ["Cursor", "Claude Code", "Gemini CLI", "OpenClaw", "LLM-Assisted Coding"],
+    items: ["Cursor", "Claude Code", "Gemini CLI", "OpenClaw", "LangChain", "RAG", "LLM-Assisted Coding"],
   },
 ];
 
 export const NOTABLE_PROJECTS = [
   {
-    title: "Physics-Informed AI for Circuit Testing",
+    title: "Topology-Aware AI for Circuit Testing",
     description:
       "Topology-Aware Justification Oracle for digital circuits using Multi-Path Transformers and 3-Valued Logic (0, 1, X). Topology-aware embeddings maintain global consistency across reconvergent paths, while a differentiable logic consistency loss enforces Boolean truth tables during training. The AI model is integrated directly into a classical PODEM ATPG backtrace loop, reducing test-generation backtrack counts and accelerating fault coverage. Developed as M.S. research at SIUC with RL fine-tuning support for continuous self-improvement.",
     tags: ["Python", "PyTorch", "Transformers", "ATPG", "RL", "Research"],
