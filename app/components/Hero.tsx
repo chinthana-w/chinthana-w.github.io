@@ -75,8 +75,8 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2">
           {[
-            "4+ YOE Software Engineer",
-            "Full-Stack Web Dev",
+            "4+ years experience",
+            "Full-Stack",
             "Systems & Embedded",
             "M.S. ECE @ SIUC",
           ].map((label) => (
